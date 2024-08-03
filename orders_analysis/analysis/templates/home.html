@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Анализ заказов по историческим данным</h1>
+<form method="get" action="{% url 'generate_report' %}">
+    Магазин: <input type="text" name="store"><br>
+    Товар: <input type="text" name="item"><br>
+    Дата с: <input type="date" name="date_from"><br>
+    Дата по: <input type="date" name="date_to"><br>
+    <button type="submit">Сформировать отчёт</button>
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Отзывы и предложения</h1>
+<form method="post" action="{% url 'submit_comment' %}">
+    {% csrf_token %}
+    Автор: <input type="text" name="author" required><br>
+    E-mail: <input type="email" name="email" required><br>
+    Комментарий: <textarea name="comment" required></textarea><br>
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}

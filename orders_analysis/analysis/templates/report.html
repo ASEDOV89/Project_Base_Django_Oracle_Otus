@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Отчёт</h1>
+{{ report|safe }}
+<a href="{% url 'download_report' %}">Скачать отчёт в формате CSV</a>
+{% endblock %}
